@@ -3,7 +3,7 @@
 // @namespace    http://eu.battle.net/
 // @include      http*://eu.battle.net/forums/*
 // @include      http*://us.battle.net/forums/*
-// @version      0.2
+// @version      0.3
 // @description  Replace old links to items in the D3 Game Guide with the new linking format
 // @author       Hebalon
 // @grant        none
@@ -26,6 +26,7 @@ for(var i = 0; i < aLinks.length; i++){
     if (aLinks[i].href.includes("/item/")) {
         // correct http:// to https://
         aLinks[i].href = aLinks[i].href.replace("http://", "https://");
+        aLinks[i].href = aLinks[i].href.replace(".diablo3.com/", ".battle.net/d3/");
         // check aaaaallllll the items
         if (aLinks[i].href.endsWith("item/bane-of-the-powerful")) {
 aLinks[i].href = aLinks[i].href.replace("item/bane-of-the-powerful", "item/bane-of-the-powerful-Unique_Gem_001_x1");
